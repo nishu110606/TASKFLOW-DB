@@ -1,0 +1,21 @@
+{
+  "name": "taskflow-api",
+  "version": "1.0.0",
+  "description": "RESTful backend service for task management",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "verify:task4": "node src/scripts/verifyTask4.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "mongodb": "^7.1.0",
+    "mongoose": "^9.2.4",
+    "morgan": "^1.10.0"
+  }
+}
