@@ -1,4 +1,4 @@
-﻿import mongoose from 'mongoose';
+import mongoose from 'mongoose';
 
 const taskSchema = new mongoose.Schema(
   {
@@ -30,6 +30,7 @@ const taskSchema = new mongoose.Schema(
 
 taskSchema.index({ text: 'text' });
 taskSchema.index({ completed: 1, createdAt: -1 });
+taskSchema.index({ createdAt: -1 });
 
 taskSchema.pre('save', function updateModified() {
   this.lastModified = new Date();
